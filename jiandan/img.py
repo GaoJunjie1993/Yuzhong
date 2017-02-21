@@ -1,6 +1,7 @@
 import requests
 import urllib.request
 from bs4 import BeautifulSoup
+from time import sleep
 
 class jiandan( object ):
     def __init__( self ):
@@ -31,6 +32,7 @@ class jiandan( object ):
         for item in download_new:
             urllib.request.urlretrieve( 'http://' + item, pic_path + item[ -10: ] ) 
             print( 'Done' )
+            sleep( 3 )
 
 
 url = 'http://jiandan.net/pic-2016/page-100'
